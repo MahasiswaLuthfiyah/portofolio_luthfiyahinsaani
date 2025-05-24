@@ -9,11 +9,10 @@ const CTA = () => (
     <Newsletter
       title={
         <>
-          Subscribe to my <GradientText>Newsletters</GradientText>
+          Berlangganan <GradientText>Newsletter Saya</GradientText>
         </>
       }
-      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
-          esse non molestias eos excepturi, inventore atque cupiditate."
+      description="Dapatkan pembaruan terbaru seputar proyek, artikel, dan informasi menarik lainnya langsung ke email Anda."
     />
   </Section>
 );

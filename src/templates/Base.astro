@@ -15,18 +15,36 @@ const {
 } = Astro.props as Props;
 ---
 
-<html lang='en'>
+<html lang="id">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>{title}</title>
-    <meta name='description' content={description} />
-    <meta name='author' content={AppConfig.author} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel='alternate' type='application/rss+xml' href='/rss.xml' />
-    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={AppConfig.author} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/UIUX.png" />
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/assets/images/UIUX.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="Youtube:card" content="summary_large_image" />
+    <meta name="Youtube:title" content={title} />
+    <meta name="Youtube:description" content={description} />
+    <meta name="Youtube:image" content="/assets/images/UIUX.png" />
   </head>
-  <body class='bg-slate-900 text-gray-100'>
+
+  <body class="bg-slate-900 text-gray-100">
     <Navbar />
 
     <slot></slot>
